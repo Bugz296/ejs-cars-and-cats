@@ -17,27 +17,27 @@ app.set('view engine', 'ejs');
 /***************************
 * ROUTES
 ****************************/ 
-app.get('/', function(request, response){
+app.get('/assignments/ecac/', function(request, response){
     // Just wanted to try creating an array to put image names
     response.render('index');
 });
 
-app.get('/cars', function(request, response){
+app.get('/assignments/ecac/cars', function(request, response){
     // Just wanted to try creating an array to put image names and pass it through the render page
     var images = ['car1.jpg', 'car2.jpg', 'car3.jpg', 'car4.jpg', 'car5.jpg'];
     response.render('cars', {cars: images});
 });
 
-app.get('/cats', function(request, response){
+app.get('/assignments/ecac/cats', function(request, response){
     // Just wanted to try creating an array to put image names and pass it through the render page
     var images = ['cat1.jpg', 'cat2.jpg', 'cat3.jpg', 'cat4.jpg', 'cat5.jpg'];
     response.render('cats', {cats: images});
 });
 
-app.get('/form', function(request, response){
+app.get('/assignments/ecac/form', function(request, response){
     response.render('form');
 });
-// tell the express app to listen on port 8000, always put this at the end of your server.js file
-app.listen(8000, function() {
-    console.log("listening on port 8000");
+// tell the express app to listen on port 3002, always put this at the end of your server.js file
+app.listen(3002, function() {
+    console.log("listening on port 3002");
 })
